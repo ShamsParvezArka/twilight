@@ -1,4 +1,5 @@
-" Gruber colorscheme from Emacs developed by Roman Madyanov
+" Gruber colorscheme from Emacs
+" Author: Roman Madyanov
 " GitLab link: https://gitlab.com/madyanov/gruber.vim
 
 highlight clear
