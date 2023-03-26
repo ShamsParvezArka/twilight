@@ -1,8 +1,3 @@
---[[
-	Neovim Plug-in collection for better productivity
-	Author: Shams Parvez Arka <parvez6826@gmail.com>
---]]
-
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
