@@ -16,10 +16,10 @@
 
 
 ## 🤖 **Terminal setup**
-* **Font:** [Hack](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip)
-* **Font size:** 18
-* **Colorscheme:** [Brogrammer](https://gogh-co.github.io/Gogh/)
-* **Background:** #1C1C1C
+* Font: [Hack](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip)
+* Font size: 18
+* Colorscheme: [Brogrammer](https://gogh-co.github.io/Gogh/)
+* Background: **#1C1C1C**
 > **n.b** modifying terminal background is needed to match with the neovim background color.
 
 ## 🛠️ **Installation**
