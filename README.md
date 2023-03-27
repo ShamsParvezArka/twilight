@@ -11,8 +11,10 @@
 * [Neovim 0.8+](https://github.com/neovim/neovim/releases/tag/stable)
 * [Lua](https://www.lua.org/)
 * [Node](https://nodejs.org/en)
+* [Rust](https://www.rust-lang.org/)
 * [Python3](https://www.python.org/)
 * `xclip` - Universal clipboad support
+* `logo-ls` - Integrated icons with `ls` command 
 
 ## 🗺️ **Project Layout**
 ```
@@ -29,8 +31,14 @@ nvim
 ```
 
 ## 📟 **Terminal setup**
-* Font: [Hack](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip)
-* Font size: 18
+* Z shell setup:
+	* Install `zsh` and set it as default shell
+	* Install `Oh My Zsh` via wget
+	```
+	sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+	```
+* Terminal Font: [Hack](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip)
+* Font size: **18**
 * Colorscheme: [Brogrammer](https://gogh-co.github.io/Gogh/)
 * Background: **`#1C1C1C`**
 > **n.b** modifying terminal background is needed to match with the neovim background color.
@@ -52,6 +60,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ```
 ./install.sh
 ```
+> `install.sh` will spin up your neovim and zsh
 
 
 ## 📦 **Basic setup**
@@ -69,7 +78,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 **Outside Neovim**
 
 * Copy the splash screen script
-```sehll
-cp dashboard.lua $HOME/.local/share/nvim/site/pack/packer/start/startup.nvim/lua/startup/themes/dashboard.lua
-```
+	```sehll
+	cp dashboard.lua $HOME/.local/share/nvim/site/pack/packer/start/startup.nvim/lua/startup/themes/dashboard.lua
+	```
 
