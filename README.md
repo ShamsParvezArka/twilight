@@ -14,6 +14,19 @@
 * [Python3](https://www.python.org/)
 * `xclip` - Universal clipboad support
 
+## 🗺️ **Project Layout**
+```
+nvim
+├── colors
+│   └── gruber.vim
+├── init.lua
+├── lua
+│   ├── base.lua
+│   ├── lsp.lua
+│   └── plugins.lua
+└── plugin
+    └── packer_compiled.lua
+```
 
 ## 📟 **Terminal setup**
 * Font: [Hack](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip)
