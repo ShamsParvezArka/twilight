@@ -41,26 +41,26 @@ nvim
 * Font size: **18**
 * Colorscheme: [Brogrammer](https://gogh-co.github.io/Gogh/)
 * Background: **`#1C1C1C`**
-> **n.b** modifying terminal background is needed to match with the neovim background color.
+	> **n.b** modifying terminal background is needed to match with the neovim background color.
 
 ## 🛠️ **Installation**
 * First things first, make the installation script `install.sh` executable.
-```shell
-chmod +x install.sh 
-```
+	```shell
+	chmod +x install.sh 
+	```
 * Install `Packer.nvim`
 
-```shell		
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
+	```shell		
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+	~/.local/share/nvim/site/pack/packer/start/packer.nvim
+	```
 
 * Run the installer.
 
-```
-./install.sh
-```
-> `install.sh` will spin up your neovim and zsh
+	```
+	./install.sh
+	```
+	> `install.sh` will spin up your neovim and zsh
 
 
 ## 📦 **Basic setup**
