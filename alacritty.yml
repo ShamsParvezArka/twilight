@@ -1,0 +1,42 @@
+live_config_reload: true
+
+window:
+  # opacity: 0.95
+  dynamic_padding: false
+  decorations: Full
+
+font:
+  normal:
+    family: Hack Nerd Font Mono
+    style: Regular
+  size: 18.0
+  AppleFontSmoothing: true
+
+# Colors (Brogrammer)
+colors:
+  # Default colors
+  primary:
+    background: '#1c1c1c'
+    foreground: '#D6DBE5'
+
+  # Normal colors
+  normal:
+    black: '#1F1F1F'
+    red: '#F81118'
+    green: '#2DC55E'
+    yellow: '#ECBA0F'
+    blue: '#2A84D2'
+    magenta: '#4E5AB7'
+    cyan: '#1081D6'
+    white: '#D6DBE5'
+
+  # Bright colors
+  bright:
+    black: '#D6DBE5'
+    red: '#DE352E'
+    green: '#1DD361'
+    yellow: '#F3BD09'
+    blue: '#1081D6'
+    magenta: '#5350B9'
+    cyan: '#0F7DDB'
+    white: '#FFFFFF'
