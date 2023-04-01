@@ -27,6 +27,9 @@ return require('packer').startup(function(use)
 		run = function() vim.fn["mkdp#util#install"]() end,
 	})
 
+	-- Tab integration
+	-- use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+
 	-- Icon pack 
 	use 'ryanoasis/vim-devicons'
 	use 'nvim-tree/nvim-web-devicons'
@@ -49,9 +52,6 @@ return require('packer').startup(function(use)
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 
-	-- VScode like pictograms
-	use {'onsails/lspkind-nvim'}
-
 	-- Improved syntax heighlighting
 	use {'nvim-treesitter/nvim-treesitter'}
 	use 'norcalli/nvim-colorizer.lua'
@@ -69,6 +69,7 @@ return require('packer').startup(function(use)
 			{'hrsh7th/cmp-path'},
 			{'saadparwaiz1/cmp_luasnip'},
 			{'hrsh7th/cmp-nvim-lua'},
+			{'onsails/lspkind-nvim'},     -- VScode like pictograms
 			-- Snippets
 			{'L3MON4D3/LuaSnip'},
 			{'rafamadriz/friendly-snippets'},
