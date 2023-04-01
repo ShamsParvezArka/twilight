@@ -1,26 +1,39 @@
+local lsp = require('lsp-zero').preset({
+	name = 'minimal'
+})
 local lspkind = require("lspkind")
-require'cmp'.setup {
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
+lsp.on_attach(function(client, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+end)
+
+cmp.setup({
+	sources = {
+		{name = 'path'},
+		{name = 'nvim_lsp'},
+		{name = 'buffer', keyword_length = 3},
+		{name = 'luasnip', keyword_length = 2},
+	},
+
+	mapping = {
+		['<Tab>'] = cmp_action.luasnip_supertab(),
+		['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+	},
+
 	formatting = {
-		format = lspkind.cmp_format({
-			wirth_text = false,
-			mode = 'text_symbol',
-			max_width = 50,
+		fields = {'abbr', 'kind', 'menu'},
+		format = require('lspkind').cmp_format({
+			mode = 'symbol',
+			maxwidth = 50,
 			ellipsis_char = '...',
-			preset = 'default'
 		})
 	},
-	sources = {
-		{ name = 'nvim_lsp' }
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered()
 	}
-}
+})
 
-local lspconfig = require("lspconfig")
-lspconfig.clangd.setup {}
-lspconfig.cssls.setup {}
-lspconfig.html.setup {}
-lspconfig.ltex.setup {}
-lspconfig.lua_ls.setup {}
-lspconfig.marksman.setup {}
-lspconfig.pyright.setup {}
-lspconfig.tsserver.setup {}
-
+lsp.setup()
