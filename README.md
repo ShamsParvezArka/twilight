@@ -37,8 +37,8 @@ nvim
 	```
 	sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 	```
-* Terminal Font: [Hack](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip)
-* Font size: **18**
+* Terminal Font: [FiraCode](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip)
+* Font size: **17**
 * Colorscheme: [Brogrammer](https://gogh-co.github.io/Gogh/)
 * Background: **`#1C1C1C`**
 	> **n.b** modifying terminal background is needed to match with the neovim background color.
