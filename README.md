@@ -4,8 +4,8 @@
 
 ## 🎴 **Preview**
 ![](assets/splash_screen.png)
-![](assets/lsp_view.png)
-![](assets/fzf_view.png)
+![](assets/telescope.png)
+![](assets/tree_lsp.png)
 
 ## ⚡ **Requirements**
 * [Neovim 0.8+](https://github.com/neovim/neovim/releases/tag/stable)
