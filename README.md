@@ -34,7 +34,7 @@ nvim
 * Z shell setup:
 	* Install `zsh` and set it as default shell
 	* Install `Oh My Zsh` via wget
-	```
+	```bash
 	sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 	```
 * Terminal Font: [FiraCode](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip)
@@ -45,19 +45,19 @@ nvim
 
 ## 🛠️ **Installation**
 * First things first, make the installation script `install.sh` executable.
-	```shell
+	```bash
 	chmod +x install.sh 
 	```
 * Install `Packer.nvim`
 
-	```shell		
+	```bash		
 	git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 	~/.local/share/nvim/site/pack/packer/start/packer.nvim
 	```
 
 * Run the installer.
 
-	```
+	```bash
 	./install.sh
 	```
 	> `install.sh` will spin up your neovim and zsh
@@ -78,7 +78,7 @@ nvim
 **Outside Neovim**
 
 * Copy the splash screen script
-	```sehll
+	```bash
 	cp dashboard.lua $HOME/.local/share/nvim/site/pack/packer/start/startup.nvim/lua/startup/themes/dashboard.lua
 	```
 
