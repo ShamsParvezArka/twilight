@@ -26,5 +26,6 @@ map.set('n', 'sv', ':vertical split<CR>')
 map.set('n', '<C-s>', ':w<CR>')
 
 -- Colorscheme
-vim.cmd("colorscheme catppuccin_mocha")
+vim.cmd("colorscheme gruber")
 vim.cmd("let g:syntastic_vim_checkers = ['vint']")
+vim.cmd("source ~/.config/nvim/lua/lsp.lua")
