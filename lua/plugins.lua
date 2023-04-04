@@ -27,9 +27,6 @@ return require('packer').startup(function(use)
 		run = function() vim.fn["mkdp#util#install"]() end,
 	})
 
-	-- Tab integration
-	-- use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
-
 	-- Icon pack 
 	use 'ryanoasis/vim-devicons'
 	use 'nvim-tree/nvim-web-devicons'
@@ -38,12 +35,6 @@ return require('packer').startup(function(use)
 	use {
 		"windwp/nvim-autopairs",
 		config = function() require("nvim-autopairs").setup {} end
-	}
-
-	-- Smooth cursor
-	use { 'gen740/SmoothCursor.nvim',
-	config = function()
-		require('smoothcursor').setup() end
 	}
 
 	-- Status line 
@@ -76,12 +67,13 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},     -- Required
 
 			-- VScode like pictograms
-			{'onsails/lspkind-nvim'},
+			{'onsails/lspkind-nvim'}
 		}
 	}
 
 	-- Colorscheme
 	use 'catppuccin/vim'
+	use "rebelot/kanagawa.nvim"
 
 	-- Neovim splash screen
 	use {
