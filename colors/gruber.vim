@@ -1,7 +1,3 @@
-" Gruber colorscheme from Emacs
-" Author: Roman Madyanov
-" GitLab link: https://gitlab.com/madyanov/gruber.vim
-
 highlight clear
 
 if exists("syntax_on")
@@ -16,7 +12,7 @@ let s:black      = ["#1c1c1c", "234"]
 let s:lightblack = ["#262626", "235"]
 let s:darkgray   = ["#444444", "238"]
 let s:gray       = ["#626262", "241"]
-let s:white      = ["#e4e4e4", "254"]
+let s:white      = ["#E2E3E5", "254"]
 
 let s:red     = ["#ff5f5f", "203"]
 let s:green   = ["#87d75f", "113"]
