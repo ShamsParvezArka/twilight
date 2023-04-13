@@ -12,8 +12,13 @@ font:
   normal:
     family: Hack Nerd Font Mono
     style: Regular
-
   size: 18
+
+cursor:
+  style:
+    shape: Block
+    blinking: Always
+    blink_interval: 570
 
 # Colors (Brogrammer)
 colors:
@@ -31,7 +36,7 @@ colors:
     blue: '#2A84D2'
     magenta: '#4E5AB7'
     cyan: '#1081D6'
-    white: '#C4CAD8'
+    white: '#E2E3E5'
 
   # Bright colors
   bright:
@@ -42,4 +47,4 @@ colors:
     blue: '#1081D6'
     magenta: '#5350B9'
     cyan: '#0F7DDB'
-    white: '#D6DBE5'
+    white: '#E2E3E5'
