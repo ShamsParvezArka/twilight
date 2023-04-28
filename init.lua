@@ -14,13 +14,13 @@ require("mason").setup({
 require("mason-lspconfig").setup()
 require("lspkind")
 
--- require('lualine').setup{
--- 	options = {
--- 		component_separators = { left = '', right = ''},
--- 		section_separators = { left = '', right = ''},
--- 		theme = 'ayu_mirage'
--- 	}
--- }
+require('lualine').setup{
+	options = {
+		component_separators = { left = '', right = ''},
+		section_separators = { left = '', right = ''},
+		theme = 'vscode'
+	}
+}
 
 require 'nvim-treesitter.configs'.setup{
 	ensure_installed = { "c", "cpp", "python", "lua", "vim", "javascript", "bash", "help", "query", "markdown", "markdown_inline"},
