@@ -43,6 +43,12 @@ return require('packer').startup(function(use)
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 
+	-- Bufferline
+	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+
+	-- Tab integration
+	use { 'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons' }
+
 	-- Improved syntax heighlighting
 	use {'nvim-treesitter/nvim-treesitter'}
 	use 'norcalli/nvim-colorizer.lua'
@@ -52,36 +58,40 @@ return require('packer').startup(function(use)
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
 		requires = {
-			{'neovim/nvim-lspconfig'},             -- Required
-			{                                      -- Optional
+			{'neovim/nvim-lspconfig'},
+			{
 				'williamboman/mason.nvim',
 				run = function()
 					pcall(vim.cmd, 'MasonUpdate')
 				end,
 			},
-			{'williamboman/mason-lspconfig.nvim'}, -- Optional
+			{'williamboman/mason-lspconfig.nvim'},
 
 			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},     -- Required
-			{'hrsh7th/cmp-nvim-lsp'}, -- Required
-			{'L3MON4D3/LuaSnip'},     -- Required
+			{'hrsh7th/nvim-cmp'},
+			{'hrsh7th/cmp-nvim-lsp'},
+			{'L3MON4D3/LuaSnip'},
 
 			-- VScode like pictograms
 			{'onsails/lspkind-nvim'}
 		}
 	}
 
+	-- Simple winbar integration 
+	use {
+		"SmiteshP/nvim-navic",
+		requires = "neovim/nvim-lspconfig"
+	}
+
 	-- Colorscheme
 	use 'catppuccin/vim'
 	use "rebelot/kanagawa.nvim"
-
-	-- Neovim splash screen
-	use {
-		"startup-nvim/startup.nvim",
-		requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-		config = function()
-			require"startup".setup()
-		end
-	}
-
+	use 'lifepillar/vim-solarized8'
+	use 'Mofiqul/vscode.nvim'
+	use "morhetz/gruvbox"
+	use 'Mofiqul/dracula.nvim'
+	use {'srcery-colors/srcery-vim', as = 'srcery'}
+	use 'pineapplegiant/spaceduck'
+	use 'tanvirtin/monokai.nvim'
+	use 'nyoom-engineering/oxocarbon.nvim'
 end)
