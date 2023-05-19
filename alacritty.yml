@@ -4,15 +4,15 @@ window:
   dimensions:
     columns: 80
     lines: 24
-  opacity: 0.85
+      #  opacity: 0.85
   dynamic_padding: false
   decorations: Full
 
 font:
   normal:
-    family: Hack Nerd Font Mono
+    family: Iosevka Nerd Font Mono
     style: Regular
-  size: 18
+  size: 26
 
 cursor:
   style:
@@ -24,7 +24,7 @@ cursor:
 colors:
   # Default colors
   primary:
-    background: '#1c1c1c'
+    background: '#181818'
     foreground: '#E2E3E5'
 
   # Normal colors
