@@ -15,7 +15,12 @@ return require('packer').startup(function(use)
 	use "mhinz/vim-signify"
 
 	-- VScode like sidebar & Fuzzy finding
-	use "preservim/nerdtree"
+	use {
+		'nvim-tree/nvim-tree.lua',
+		requires = {
+			'nvim-tree/nvim-web-devicons', -- optional
+		},
+	}
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		requires = { {'nvim-lua/plenary.nvim'} }
@@ -43,8 +48,12 @@ return require('packer').startup(function(use)
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 
+	-- Indentation guide
+	use "lukas-reineke/indent-blankline.nvim"
+
 	-- Tab integration
 	use { 'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons' }
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
 	-- Improved syntax heighlighting
 	use {'nvim-treesitter/nvim-treesitter'}

@@ -27,15 +27,15 @@ cmp.setup({
 		['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
 	},
 	formatting = {
-		fields = {'kind', 'abbr'},
+		fields = {"abbr", "kind", "menu"},
 		format = require('lspkind').cmp_format({
-			mode = "symbol",
+			mode = "symbol_text",
 			maxwidth = 20,
 			ellipsis_char = '~',
 		}),
 	},
 	window = {
-		--completion = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered()
 	}
 })

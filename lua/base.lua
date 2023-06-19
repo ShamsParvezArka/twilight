@@ -18,16 +18,19 @@ set.smartindent = true
 set.undofile = true
 set.scrolloff = 8
 set.pumheight = 10
+set.list = true
+set.list = true
+set.listchars:append "space:⋅"
 
 vim.diagnostic.config({
-  virtual_text = false,
+	virtual_text = false,
 })
 
 -- Key bindings
 map.set('n', 'ff', ':Telescope find_files hidden=true<CR>')
 map.set('n', 'fd', ':Telescope diagnostics<CR>')
 map.set('n', 'fb', ':Telescope buffers<CR>')
-map.set('n', '<M-m>', ':NERDTreeToggle<CR>')
+map.set('n', '<M-m>', ':NvimTreeToggle<CR>')
 map.set('n', 'sv', ':vertical split<CR>')
 map.set('n', '<C-s>', ':w<CR>')
 
