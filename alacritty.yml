@@ -2,17 +2,17 @@ live_config_reload: true
 
 window:
   dimensions:
-    columns: 80
-    lines: 24
-      #  opacity: 0.85
-  dynamic_padding: false
-  decorations: Full
+    columns: 85
+    lines: 35
+      #opacity: 0.92
+  decorations: full
 
 font:
   normal:
-    family: Iosevka Nerd Font Mono
+    #family: JetBrainsMono Nerd Font Mono
+    family: DejaVuSansM Nerd Font
     style: Regular
-  size: 26
+  size: 18.0
 
 cursor:
   style:
@@ -48,3 +48,9 @@ colors:
     magenta: '#5350B9'
     cyan: '#0F7DDB'
     white: '#E2E3E5'
+
+  # Cursor colors
+  cursor:
+    text: '#000000'
+    cursor: '#D6DBE5'
+

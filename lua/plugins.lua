@@ -43,9 +43,6 @@ return require('packer').startup(function(use)
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 
-	-- Bufferline
-	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
-
 	-- Tab integration
 	use { 'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons' }
 
@@ -82,16 +79,32 @@ return require('packer').startup(function(use)
 		"SmiteshP/nvim-navic",
 		requires = "neovim/nvim-lspconfig"
 	}
+	use({
+		"utilyre/barbecue.nvim",
+		tag = "*",
+		requires = {
+			"SmiteshP/nvim-navic",
+			"nvim-tree/nvim-web-devicons", -- optional dependency
+		},
+		after = "nvim-web-devicons",     -- keep this if you're using NvChad
+		config = function()
+			require("barbecue").setup()
+		end,
+	})
 
 	-- Colorscheme
+	use { 'rktjmp/lush.nvim' }
+	use({ 'rose-pine/neovim', as = 'rose-pine' })
 	use 'catppuccin/vim'
 	use "rebelot/kanagawa.nvim"
 	use 'lifepillar/vim-solarized8'
 	use 'Mofiqul/vscode.nvim'
 	use "morhetz/gruvbox"
-	use 'Mofiqul/dracula.nvim'
 	use {'srcery-colors/srcery-vim', as = 'srcery'}
 	use 'pineapplegiant/spaceduck'
 	use 'tanvirtin/monokai.nvim'
 	use 'nyoom-engineering/oxocarbon.nvim'
+	use ({ "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" })
+
 end)
+
