@@ -1,25 +1,27 @@
-local lsp = require('lsp-zero').preset({})
+local lsp_zero = require('lsp-zero').preset({})
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
-local navic = require("nvim-navic")
 
-lsp.on_attach(function(client, bufnr)
-	lsp.default_keymaps({buffer = bufnr})
-end)
+lsp_zero.on_attach(
+	function(_, bufnr)
+		lsp_zero.default_keymaps({ buffer = bufnr })
+	end
+)
 
---require("lspconfig").clangd.setup {
---    on_attach = function(client, bufnr)
---		navic.attach(client, bufnr)
---		vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer = 0})
---    end
---}
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        virtual_text = false,
+		signs = true,
+		update_in_insert = false
+    }
+)
 
 cmp.setup({
 	sources = {
-		{name = 'path'},
-		{name = 'nvim_lsp'},
-		{name = 'buffer', keyword_length = 3},
-		{name = 'luasnip', keyword_length = 2},
+		{ name = 'path' },
+		{ name = 'nvim_lsp' },
+		{ name = 'buffer', keyword_length = 3 },
+		-- { name = 'luasnip', keyword_length = 2 },
 	},
 	mapping = {
 		['<C-Space>'] = cmp.mapping.complete(),
@@ -27,11 +29,11 @@ cmp.setup({
 		['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
 	},
 	formatting = {
-		fields = {"abbr", "kind", "menu"},
+		fields = { "kind", "abbr", "menu" },
 		format = require('lspkind').cmp_format({
 			mode = "symbol_text",
-			maxwidth = 20,
-			ellipsis_char = '~',
+			maxwidth = 50,
+			ellipsis_char = '...',
 		}),
 	},
 	window = {
@@ -40,4 +42,4 @@ cmp.setup({
 	}
 })
 
-lsp.setup()
+lsp_zero.setup()

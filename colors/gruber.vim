@@ -1,3 +1,4 @@
+
 highlight clear
 
 if exists("syntax_on")
@@ -143,7 +144,7 @@ call s:hl("WildMenu",       { "fg": s:white, "bg": s:gray, "style": "bold" })
 call s:hl("TabLine",        { "fg": s:gray, "bg": s:lightblack })
 highlight! link TabLineFill TabLine
 
-call s:hl("TabLineSel",     { "fg": s:white, "style": "bold,italic" })
+call s:hl("TabLineSel",     { "fg": s:white, "style": "bold" })
 call s:hl("Title",          { "fg": s:yellow, "style": "bold" })
 
 " Diff
@@ -167,7 +168,7 @@ call s:hl("SpellLocal",     { "style": "undercurl" })
 call s:hl("SpellRare",      { "style": "underdotted" })
 
 " Folding
-call s:hl("Folded",         { "fg": s:brown, "bg": s:lightblack , "style": "italic" })
+call s:hl("Folded",         { "fg": s:brown, "bg": s:lightblack , "style": "bold" })
 call s:hl("FoldColumn",     { "fg": s:brown })
 
 " Diagnostic

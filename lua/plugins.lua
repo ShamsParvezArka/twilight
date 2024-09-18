@@ -22,15 +22,9 @@ return require('packer').startup(function(use)
 		},
 	}
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.1',
+		'nvim-telescope/telescope.nvim', tag = '0.1.6',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-
-	-- Markdown live preview
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function() vim.fn["mkdp#util#install"]() end,
-	})
 
 	-- Icon pack 
 	use 'ryanoasis/vim-devicons'
@@ -47,9 +41,6 @@ return require('packer').startup(function(use)
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
-
-	-- Indentation guide
-	use "lukas-reineke/indent-blankline.nvim"
 
 	-- Tab integration
 	use { 'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons' }
@@ -101,9 +92,22 @@ return require('packer').startup(function(use)
 		end,
 	})
 
+	-- Welcome splash screen
+	-- use {
+	-- 	'nvimdev/dashboard-nvim',
+	-- 	event = 'VimEnter',
+	-- 	config = function()
+	-- 		require('dashboard').setup {
+	-- 			theme = 'hyper'
+	-- 		}
+	-- 	end,
+	-- 	requires = {'nvim-tree/nvim-web-devicons'}
+	-- }
+
 	-- Colorscheme
-	use { 'rktjmp/lush.nvim' }
-	use({ 'rose-pine/neovim', as = 'rose-pine' })
+	use { "craftzdog/solarized-osaka.nvim" }
+	use {'rktjmp/lush.nvim'}
+	use({'rose-pine/neovim', as = 'rose-pine'})
 	use 'catppuccin/vim'
 	use "rebelot/kanagawa.nvim"
 	use 'lifepillar/vim-solarized8'

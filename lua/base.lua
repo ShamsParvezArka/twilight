@@ -1,7 +1,7 @@
 local set = vim.opt
-local map = vim.keymap
+local cmd = vim.cmd
 
--- set.guicursor = ""
+-- Basics
 set.encoding = 'UTF-8'
 set.clipboard:append('unnamedplus')
 set.wrap = true
@@ -11,33 +11,17 @@ set.mouse:append('a')
 set.title = true
 set.rnu = true
 set.nu = true
-set.tabstop = 2
-set.shiftwidth = 2
+set.tabstop = 4
+set.shiftwidth = 4
 set.autoindent = true
 set.smartindent = true
 set.undofile = true
 set.scrolloff = 8
 set.pumheight = 10
-set.list = true
-set.list = true
-set.listchars:append "space:⋅"
-
-vim.diagnostic.config({
-	virtual_text = false,
-})
-
--- Key bindings
-map.set('n', 'ff', ':Telescope find_files hidden=true<CR>')
-map.set('n', 'fd', ':Telescope diagnostics<CR>')
-map.set('n', 'fb', ':Telescope buffers<CR>')
-map.set('n', '<M-m>', ':NvimTreeToggle<CR>')
-map.set('n', 'sv', ':vertical split<CR>')
-map.set('n', '<C-s>', ':w<CR>')
+set.colorcolumn = '80'
 
 -- Colorscheme
-vim.cmd("colorscheme gruber")
-vim.cmd("let g:syntastic_vim_checkers = ['vint']")
-vim.cmd("let g:monokai_italic=0")
--- vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
-
-vim.cmd("source ~/.config/nvim/lua/lsp.lua")
+cmd("colorscheme gruvbox")
+cmd("let g:syntastic_vim_checkers = ['vint']")
+cmd("hi FloatBorder guibg=None guifg=None")
+cmd("au ColorScheme * hi Normal ctermbg=None")
